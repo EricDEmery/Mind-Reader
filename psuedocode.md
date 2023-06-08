@@ -3,6 +3,13 @@
     -Mind reader should be able to switch pages byt manipulating state
     -Mind reader will guess users symbol based off of the number they're thinking of
 
+## Assumed Functions ##
+
+    -INIT()
+    -NEXT PAGE()
+    -PREVIOUS PAGE()
+    -RANDOM SYMBOL()
+    
 ## Button Actions ##
 
     -go button (call nextPage function)
