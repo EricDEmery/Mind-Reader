@@ -60,3 +60,49 @@ function randomize() {
     }
     instruct.innerHTML = num;
 }
+
+function changePage() {
+    if (pageNum === 4) {
+        randomize()
+    } else if (pageNum === 5) {
+        instruct.innerHTML = sym;
+    }
+    else {
+        instruct.innerHTML = mainArr[pageNum].instruct
+    }
+    next.innerHTML = mainArr[pageNum].nextButton
+    instruct.innerHTML = mainArr[pageNum].instruct
+    example.innerHTML = mainArr[pageNum].example
+
+    if (pageNum === 0) {
+        goButton.style.visibility = 'visible';
+        prevButton.style.visibility = 'hidden'
+        nextButton.style.vidsibility = 'hidden';
+
+    } else if (pageNum === 5) {
+        goButton.style.visibility = 'hidden';
+        prevButton.style.visibility = 'visible'
+        nextButton.style.vidsibility = 'visible';
+
+    } else {
+        goButton.style.visibility = 'hidden';
+        prevButton.style.visibility = 'visible'
+        nextbutton.style.vidsibility = 'visible';
+    }
+    }
+
+    changePage()
+
+    function nextPage(i) {
+        if (i.target.id === 'next' || i.targetid === 'goButton') {
+            pageNum++;
+        }
+        else if (i.target.id === 'prev') {
+            pageNum--;
+        }
+        changePage()
+    }
+    
+next.addEventListner('click', nextPage)
+goButton.addEventListner('click', nextPage)
+prevButton.addEventListner('click', nextPage)
