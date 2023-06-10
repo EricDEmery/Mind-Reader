@@ -41,9 +41,9 @@ let mainArr = [
         prevButton: "Back"
     },
     {   //Page 6
-        instruct: "%",
-        nextButtom: '',
-        example: "Your symbol is %",
+        instruct: '',
+        nextButton: '',
+        example: "Your symbol is:",
         prevButton: "Back"
     }]
 
