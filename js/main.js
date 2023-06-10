@@ -6,7 +6,7 @@ const prevButton = document.getElementById("prev");
 const goButton = document.getElementById("goButton");
 const example = document.getElementById("example");
 let pageNum = 0;
-let arraySym = ['!', '@', '#', '$', '%'];
+let arraySym = ['!', '@', '#', '$', '%', '^', '&', '*', '~'];
 
 //Main Array For Mind Reader to Pull Information From and insert into page
 let mainArr = [
