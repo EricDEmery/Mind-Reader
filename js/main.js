@@ -1,5 +1,3 @@
-
-
 const page = document.getElementById("page");
 const instruct = document.getElementById("instruct");
 const nextButton = document.getElementById("next");
@@ -56,7 +54,7 @@ function randomize() {
         if (i % 6 === 0) {
             num += i + ': ' + sym + '<br>';
         } else {
-            let sym = arraySym[Math.floor(Math.random() * 6)];
+        let sym = arraySym[Math.floor(Math.random() * 6)];
             num += i + ' :' + sym + '<br>';
         }
     }
@@ -66,6 +64,7 @@ function randomize() {
 function changePage() {
     if (pageNum === 4) {
         randomize()
+
     } else if (pageNum === 5) {
         instruct.innerHTML = sym;
     }
