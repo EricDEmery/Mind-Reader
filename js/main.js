@@ -12,7 +12,8 @@ let mainArr = [
     {   //Page 1
         instruct: "I can read your mind",
         nextButton: '',
-        goButton: "GO"
+        goButton: "GO",
+        prevButton: ''
     },
     {   //Page 2
         instuct: "Pick a number from 1-99",
@@ -33,23 +34,20 @@ let mainArr = [
         prevButton: "Back"
     },
     {   //Page 5
+        instruct: '',
         nextButton: "Reveal",
         example: "Find your new number. Note the symbol beside the number",
         prevButton: "Back"
     },
     {   //Page 6
         instruct: "%",
+        nextButtom: '',
         example: "Your symbol is %",
         prevButton: "Back"
     }]
 
-    function nextPage() {
-        currentPage ++;
+    function randomize() {
+        let num = '';  //empty for output
+        sym = arraySym[Math.floor(Math.random() * 6)]; // Will randomize every 6th symbol
+        
     }
-
-    function go() {
-        if (currentPage === 0)
-            nextPage
-    }
-    goButton.addEventListner('click', goButton)
-    nextButton.addEventListner('click', nextButton)
