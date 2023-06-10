@@ -1,3 +1,5 @@
+
+
 const page = document.getElementById("page");
 const instruct = document.getElementById("instruct");
 const nextButton = document.getElementById("next");
@@ -16,7 +18,7 @@ let mainArr = [
         prevButton: ''
     },
     {   //Page 2
-        instuct: "Pick a number from 1-99",
+        instruct: "Pick a number from 1-99",
         nextButton: "Next",
         example: "When you have your number click next",
         prevButton: "Back"
@@ -83,12 +85,14 @@ function changePage() {
     } else if (pageNum === 5) {
         goButton.style.visibility = 'hidden';
         prevButton.style.visibility = 'visible'
-        nextButton.style.vidsibility = 'visible';
+        nextButton.style.visibility = 'hidden';
 
     } else {
+        instruct.style.visibility = 'visible';
         goButton.style.visibility = 'hidden';
         prevButton.style.visibility = 'visible'
-        nextButton.style.vidsibility = 'visible';
+        nextButton.style.visibility = 'visible';
+        example.style.visibility = 'visible'
     }
     }
 
@@ -99,11 +103,11 @@ function changePage() {
             pageNum++;
         }
         else if (i.target.id === 'prev') {
-            pageNum--;
+            pageNum = 0;
         }
         changePage()
     }
     
-nextButton.addEventListner('click', nextPage)
-goButton.addEventListner('click', nextPage)
-prevButton.addEventListner('click', nextPage)
+next.addEventListener('click', nextPage)
+goButton.addEventListener('click', nextPage)
+prev.addEventListener('click', nextPage)
