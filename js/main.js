@@ -46,8 +46,17 @@ let mainArr = [
         prevButton: "Back"
     }]
 
-    function randomize() {
-        let num = '';  //empty for output
-        sym = arraySym[Math.floor(Math.random() * 6)]; // Will randomize every 6th symbol
-        
+function randomize() {
+    let num = '';  //empty for output
+    sym = arraySym[Math.floor(Math.random() * 6)]; // Will randomize every 6th symbol
+
+    for (let i = 0; i < 100; i++) {
+        if (i % 6 === 0) {
+            num += i + ': ' + sym + '<br>';
+        } else {
+            let sym = arraySym[Math.floor(Math.random() * 6)];
+            num += i + ' :' + sym + '<br>';
+        }
     }
+    instruct.innerHTML = num;
+}
