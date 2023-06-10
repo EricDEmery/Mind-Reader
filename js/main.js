@@ -77,7 +77,8 @@ function changePage() {
     if (pageNum === 0) {
         goButton.style.visibility = 'visible';
         prevButton.style.visibility = 'hidden'
-        nextButton.style.vidsibility = 'hidden';
+        nextButton.style.visibility = 'hidden';
+        example.style.visibility = 'hidden';
 
     } else if (pageNum === 5) {
         goButton.style.visibility = 'hidden';
@@ -87,14 +88,14 @@ function changePage() {
     } else {
         goButton.style.visibility = 'hidden';
         prevButton.style.visibility = 'visible'
-        nextbutton.style.vidsibility = 'visible';
+        nextButton.style.vidsibility = 'visible';
     }
     }
 
     changePage()
 
     function nextPage(i) {
-        if (i.target.id === 'next' || i.targetid === 'goButton') {
+        if (i.target.id === 'next' || i.target.id === 'goButton') {
             pageNum++;
         }
         else if (i.target.id === 'prev') {
@@ -103,6 +104,6 @@ function changePage() {
         changePage()
     }
     
-next.addEventListner('click', nextPage)
+nextButton.addEventListner('click', nextPage)
 goButton.addEventListner('click', nextPage)
 prevButton.addEventListner('click', nextPage)
